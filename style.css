@@ -1,0 +1,136 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box ;
+    
+}
+
+body {
+    background: radial-gradient( #2b2828, rgb(8, 8, 8));;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center ;
+    z-index: 0;
+
+}
+
+span {
+    font-size: 24em;
+    position: absolute;
+    top: 0;
+    left: 0 ;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: -10px;
+    color: #756c6217; 
+    font-weight: 700 ;
+    pointer-events: none ;
+    
+}
+
+
+.container {
+    position: relative ;
+    width: 410px;
+    height: 410px ;
+    background: white ;
+    overflow: hidden;
+    z-index: 0;
+    box-shadow: 12px 26px 7px #0e0e0e;
+
+}
+
+section {
+    position: absolute ;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-wrap: nowrap ;
+    justify-content: space-between ;
+    align-items: center;
+    transition : transform .8s ease-out ;
+}
+
+section > div {
+    width:410px;
+    height: 410px;
+    position: relative ;
+}
+
+
+
+section > div img {
+    width: 100% ;
+    height: 100%;
+}
+
+
+.btn {
+    width: 60px;
+    height: 59px;
+    margin: 0 10px;
+    border-radius: 50%;
+    background: rgb(113, 30, 16);
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    color: white ;
+    z-index: 1000;
+    cursor: pointer ;
+
+}
+
+
+
+.item p , .item h1 {
+    position: absolute ;
+    bottom: 5% ;
+    left: 5% ;
+    z-index: 100;
+    transform: translateY(250%);
+    transition: transform .7s;
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1) ;
+
+}
+
+.item p  {
+    font-family: monospace ;
+    font-size: 13px;
+    transition-delay: .5s ;
+    opacity: 0;
+    color: white ;
+}
+
+.item h1{
+   bottom: 19% ;
+   font-family: 'Poiret One', cursive;
+    color: white ;
+    transition-delay: .2s ;
+    
+}
+
+
+
+
+.item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    transform: translateY(100%);
+    background: linear-gradient(to bottom , transparent , #756c62  );
+    transition: transform .6s ease-in-out ;
+}
+
+
+.item:hover:after , .item:hover p , .item:hover h1{
+    transform: translateY(0%);
+    opacity: 1;
+}
+
+
+
+
